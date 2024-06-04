@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ==================LINK CSS======================== -->
+  
+    <link rel="stylesheet" href="./project.css" />
+
+    <!-- ==================LINK BOX ICON======================== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    >
+    <title>Admin Project</title>
+  </head>
+  <body>
+    <!-- =======HEADER START============== -->
+      <!-- ==========HEADER START============= -->
+      <header class="head">
+        <div class="menu-admin">
+          <!-- <div class="menu-hbg"><i class='bx bx-menu'></i></div> -->
+          <div class="menu-logo">
+              <div class="logo">{007}</div>
+              <span>vienng</span>
+          </div>
+        </div>
+        <nav class="navbar">
+            <a href="#"><i class='bx bx-user' ></i></a> 
+        </nav>
+        <!-- logout start-->
+        <div class="logout-admin">
+          <div class="logout">
+            <i class='bx bx-log-in'></i>
+            <span>logout</span>
+          </div>
+        </div>
+         <!-- logout end-->
+
+    </header>
+<!-- ==========HEADER END============= -->
+<section class="container">
+    <!-- =======SIDEBAR START===================== -->
+    <div class="sidebar-admin" id="sidebar-admin">
+      <div class="sidebar">
+        <div class="sidebar-title">
+          <i class="bx bxs-edit"></i>
+          <a href="sklil.html"><p>My Skill</p></a>
+        </div>
+        <div class="sidebar-title">
+          <i class="bx bxs-user-account"></i>
+          <a href="project.html"><p>My Project</p></a>
+        </div>
+        <div class="sidebar-title" id = "login">
+          <i class='bx bx-log-out'></i>
+          <a><p >login</p></a>
+        </div>
+      </div>
+    </div>
+      <!-- =======SIDEBAR END===================== -->
+      <!-- =======MAIN START===================== -->
+    <div class="main-admin">
+      <div class="main">
+        <div class="head-skill">
+          <div class="button-add">
+            <h2>my project</h2>
+            <button class="btn" id="add-skill">add project</button>
+          </div>
+        </div>
+        <div class="table-skill">
+          <div class="table">
+            <table>
+              <thead>
+              <tr>
+                <th>STT</th>
+                <th>project name</th>
+                <th>image</th>
+                <th>technology</th>
+                <th>link github</th>
+                <th>description</th>
+                <th>action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            
+            </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- <div class="page">
+          <div class="show-page">
+            <label for="category" class="label-page">Show page</label>
+            <select name="page" onchange="changePageSize(event)">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+            </select>
+          </div>
+          <div class="percent-page">
+            <i class='bx bxs-left-arrow'id="percent-previous" onclick="changePage(-1)"></i>
+            <p id="page-list">1</p>
+            <i class='bx bxs-right-arrow'id="percent-previous" onclick="changePage(1)"></i>
+          </div>
+        </div> -->
+      </div>
+     
+    </div>
+  </section>
+      <!-- =======MAIN END===================== -->
+    <section class="form-product">
+      <div id="close-form" class="close-box">
+        <i class="bx bx-x" id="close"></i>
+      </div>
+      <div class="form-product-item">
+        <form id = "form"  onsubmit="submitForm(event)">
+          <h1 class="title">new project</h1>
+          <div class="input-item">
+            <div class="scope-input">
+              <input type ="hidden" id="showId">
+              <label class="label-name">name</label>
+              <input type="text" id="name" value="" />
+              <div id="error-name" class="error-skill"></div>
+            </div>
+            <div class="scope-input">
+              <label for="input-image" class="label-product pointer">Image: </label>
+              <input
+                id="input-image"
+                name="image"
+              />
+              <div id="error-name" class="error-skill"></div>
+            </div>
+            </div>
+            <div class="scope-input">
+                <label class="label-name">Technology</label>
+                <input type="text" id="technology" value="" />
+                <div id="error-name" class="error-skill"></div>
+            </div>
+            <div class="scope-input">
+                <label class="label-name">Link Github</label>
+                <input type="text" id="link-github" value="" />
+                <div id="error-name" class="error-skill"></div>
+            </div>
+            <div class="scope-input">
+                <label for="description">Description: </label>
+                <textarea name="description" id="description" rows = "4"></textarea>
+                <div id="error-name" class="error-skill"></div>
+            </div>
+            <div class="product-button">
+              <button class="btn" id="btn-cancel" type="button">Cancel</button>
+              <button class="btn" id="btn-submit"  type="submit">Add</button>
+            </div>
+        </form>
+      </div>
+    </section>
+    <!-- =======LOGIN START===================== --> 
+     <div class="login">
+      <div class="login-box">
+        <i class="bx bx-x" id="close"></i>
+      </div>
+      <div class="user-container">
+        <h2>login</h2>
+        <div class="form">
+          <form class="form-user" onsubmit="register(event)">
+            <input type="text" name="name" placeholder="Your name"> 
+             <div class="input-control">
+              <input
+                class="email"
+                type="email"
+                name="email"
+                placeholder="Your email"
+              />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <input
+                class="password"
+                type="password"
+                name="password"
+                placeholder="password"
+              />
+             <i class="fa-solid fa-eye "></i> 
+               <i class="fa-solid fa-eye-slash eye-icon"></i>
+              <div class="error"></div>
+            </div>
+            <div class="forgot-password">
+              <a href="#">Forgot-password?</a>
+            </div>
+            <div class="button-submit">
+              <button type="button" class="login-submit">login</button>
+            </div>
+            <div class="text">
+              <span>Already have a account?</span>
+              <a href="#" id="sign-open">Click here</a>
+            </div>
+            <hr />
+            <div class="button-facebook">
+              <i class="bx bxl-facebook-circle"></i>
+              <span>Login with Facebook</span>
+            </div>
+            <div class="button-google">
+              <span>Login with Google </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>  
+    <!-- =======LOGIN END===================== -->
+    <!-- ==================LINK JAVASCRIPT======================== -->
+    <script src="./project.js"></script>
+
+</html>

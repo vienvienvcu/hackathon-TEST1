@@ -1,0 +1,648 @@
+/* =====================GOOGLE FRONTS============================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ========================VARIABLE========================== */
+:root{
+    --green :#41B06E;
+    --black: #141E46;
+    --light-color: #666;
+    --white:#fff;
+    --box-shadow: 0px 8px 24px rgba(0,0,0,.1);
+    --white-alpha-40:rgba(255,255,255,0.40);
+    --white-alpha-25:rgba(255,255,255,0.25);
+    --green-alpha-25:rgba(50,205,50,0.25);
+    --green-alpha-50:rgba(50,205,50,0.50);
+    --backdrop-filter-blur:blur(5px);
+
+}
+/* ==================GLOBAL SETTINGS=========================== */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     outline: none;
+     color: #0C2D57;
+     /* color: #1E0342; */
+}
+body,
+textarea,
+button,
+input {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    
+}
+/* custom scrollbar  */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--white);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--black);
+}
+
+::after,
+::before{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+body {
+    background-color: #EFECEC;
+}
+
+/* =============HEADER START================ */
+header{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F8D082;
+}
+.menu-admin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.menu-hbg i {
+    font-size: 30px;
+    color: #0C2D57;
+}
+header .menu-logo {
+  line-height: 1;
+}
+@keyframes color-change{
+    0% {
+        color: #640D6B;
+    }
+    50%{
+        color: #0C2D57;
+    }
+    100%{
+        color: #B51B75;
+    }
+}
+header .menu-logo .logo{
+    display: block;
+    font-size: 26px;
+    animation: color-change 1.5s infinite;
+  
+}
+header .menu-logo span{
+    font-size: 13px;
+    display: inline-block;
+    padding-left: 10px;
+    animation: color-change 1s infinite;
+
+}
+.navbar a i{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #EFECEC;
+    border-radius: 50%;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: all .3s ease;
+    color: #0C2D57;
+    font-size: 20px;
+    
+}
+.navbar a i:hover{
+    background-color: #B51B75;
+    color: #EFECEC;
+}
+
+.navbar i{
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 12px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    background-color: #FFB0B0;
+    border-radius: 50%;
+    color: #0C2D57;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.navbar i:hover{
+    transform: rotate(360deg);
+}
+.logout-admin{
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 8vh;
+    right: 220px;
+    display: none;
+    transition: all .5s ease;
+}
+.logout-admin.open {
+    display: block;
+}
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 16px; 
+    margin: 40px auto; 
+}
+.logout i{
+    color: #0C2D57;
+    font-size: 26px;
+
+}
+.logout span{
+    color: #0C2D57;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+/* =============HEADER END================ */
+/* =======SIDEBAR START=====================  */
+.sidebar-admin{
+    width: 300px;
+    height: 100vh;
+    background: #0C2D57;
+    display: block;
+    margin-left: -100px;
+    z-index: 100;
+    padding: 40px;   
+}
+.sidebar-admin.open{
+    display: block;
+}
+.sidebar-title{
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.sidebar-title:hover{
+   border-bottom: 1px solid #EFECEC;
+}
+.sidebar-title i{
+    font-size: 24px;
+    color: #EFECEC;
+
+}
+.sidebar-title p{
+    font-size: 20px;
+    color: #EFECEC;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+/* =======SIDEBAR END=====================  */
+/*  =======MAIN START===================== */
+.main-admin{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.button-add{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+    margin-top: 20px; 
+    margin-bottom: 30px;   
+}
+.button-add h2 {
+    text-transform: capitalize;
+    font-size: 24px;
+}
+.btn{
+    border: none;
+    font-size: 20px;
+    background-color: #F8D082;
+    padding: 8px 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: 4px;
+}
+.btn:hover{
+    background-color: #0C2D57;
+    color: #EFECEC;
+}
+
+.table {
+    background-color:white;
+    border-radius: 40px;
+    box-shadow: var(--box-shadow);
+    padding: 16px;
+}
+table {
+       border-collapse: collapse;
+       width: 100%;
+}
+ tr:nth-child(even) {
+       background-color: #eee;
+  
+  }
+tr th{
+       text-transform: capitalize;
+       font-size: 20px;
+       color: #0C2D57;
+       font-weight: bolder;
+   
+       /* background: var(--green-alpha-25); */
+   }
+tr, td {
+       color: #0C2D57;
+   }
+td {
+       padding: 15px;
+       text-align: center;
+     }
+th {
+       height: 80px;
+   
+   }
+table, td, th {  
+    border: 1px solid #0C2D57;
+}
+.page{
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-around;
+
+ }
+ .show-page .label-page{
+  font-size: 20px;
+  color: var(--green);
+  font-weight: 600;
+ }
+ .show-page select{
+    border: none;
+    padding: 8px 30px;
+    font-size: 18px;
+    text-transform: capitalize;
+    background-color: var(--white);
+    border-radius: 6px;
+    border: 1px solid var(--green-alpha-50);
+    cursor: pointer;
+    color: var(--black);
+    transition: all .3 ease;
+    margin-left: 20px;
+ }
+ .percent-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+ }
+ .percent-page button{
+     border: none;
+     padding: 8px 18px;
+     font-size: 18px;
+ }
+
+ /*   show trang trong js span*/
+ 
+ .page-item {
+    display: inline-block;
+    margin: 0 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #0C2D57;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.page-active {
+    background-color: white;
+}
+
+.page-item:hover {
+    background-color: #0C2D57;
+    color: white;
+}
+.percent-page i {
+    font-size: 30px;
+    color: #0C2D57;
+    cursor: pointer;
+}
+.percent-page i:hover{
+    color: #0C2D57;
+}
+td img {
+ width: 40px;
+ display: inline-block;
+}
+/*  =======MAIN END===================== */
+
+/* =========== LOGIN START================ */
+
+.login{
+    position: fixed;
+    top:-100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1005;
+    background-color: var(--green-alpha-40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    backdrop-filter: var(--backdrop-filter-blur);
+    transition: all .8 ease;
+    
+}
+.login.open{
+    top: 0;
+}
+.login .user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    text-align: center;
+    width: 500px;
+    height: 700px;
+    padding: 16px 20px;
+    padding-top: 10px;
+   box-shadow: var(--box-shadow);
+   border-radius: 10px;
+}
+.login h2{
+    color: var(--black);
+    text-transform: capitalize;
+    font-size: 30px;
+    padding-bottom: 16px;
+}
+.login-box #close{
+    position: absolute;
+    color: var(--white);
+    cursor: pointer;
+    padding: 2px;
+    top: 12px;
+    right: 30px;
+    font-size: 42px;
+    padding: 2px;
+    background-color: var(--green);
+    border-radius: 50%;
+    transition: all .4s ease;
+}
+.login-box #close:hover{
+    color: #C40C0C;
+    transform: rotate(90deg);
+}
+.login form{
+    width: 100%;
+}
+.login form input{
+    width: 100%;
+    padding: 18px 20px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #eee;
+    border: .5px solid rgba(0,0,0,0.25);
+}
+.login form input::placeholder{
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.login form button{
+    width: 100%;
+    padding: 16px 20px;
+    margin-top:  30px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-size: 17px;
+    background-color: var(--green);
+    border: none;
+    border-radius: 4px;
+    border: .5px solid rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.form .forgot-password {
+    margin-top: 12px;
+  
+}
+.form .forgot-password a{
+    font-size: 16px;
+    color: var(--black);
+    cursor: pointer; 
+}
+.form .forgot-password a:hover{
+    color: var(--green);
+}
+.form .text {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.login .text a{
+    color: var(--green);
+}
+form .button-facebook,
+form .button-google {
+   display: flex;
+   gap: 25px;
+   justify-content: center;
+   align-items: center;
+}
+form .button-facebook {
+   background-color: #008DDA;
+   width: 100%;
+   padding: 10px 20px;
+   margin-top:  30px;
+   margin-bottom: 5px;
+   text-transform: capitalize;
+   font-size: 17px;
+   border: none;
+   border-radius: 4px;
+   border: .5px solid rgba(0,0,0,0.25);
+   cursor: pointer;
+   font-weight: 500;
+   color: var(--white);
+   transition: all .3 ease;
+}
+form .button-facebook i
+{
+   font-size: 36px;
+}
+.button-google img{
+   width: 36px;
+}
+form .button-google {
+   background-color: var(--white);
+   width: 100%;
+   padding: 10px 20px;
+   margin-top:  12px;
+   margin-bottom: 5px;
+   text-transform: capitalize;
+   font-size: 17px;
+   border: none;
+   border-radius: 4px;
+   border: .5px solid rgba(0,0,0,0.25);
+   cursor: pointer;
+   font-weight: 500;
+   color: var(--light-color);
+   transition: all .3 ease;
+}
+form button:hover,
+form .button-facebook:hover,
+form .button-google:hover{
+   border-color: #141E46;
+   transform: scale(1.01);
+}
+form .text {
+   display: flex;
+   width: 100%;
+   gap: 5px;
+   margin-top: 10px;
+   font-size: 16px;
+   justify-content: center;
+   align-items: center;
+}
+hr{
+   margin-top: 20px;
+   opacity: 0.2;
+}
+.user .text a{
+   color: var(--green);  
+}
+.input-control{
+   margin-bottom: 12px;
+}
+.input-control.success{
+   border-color: var(--green);
+}
+.input-control .error ,
+.email-complete{
+   color: #C40C0C;
+   text-align: left;
+   margin-top: 2px;
+   font-size: 12px;
+}
+
+/* ===========LOGIN END================ */
+
+/*=============FORM PRODUCT==================  */
+ 
+.form-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:-100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1005;
+    background-color: var(--white-alpha-25);
+    margin: 0 auto;
+    padding: 0 16px;
+    backdrop-filter: blur(2px);
+    transition: all .8 ease; 
+    border: 15px;
+}
+
+.form-product.open{
+    top: 0; 
+}
+.form-product h1{
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-product-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: var(--box-shadow); 
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid var(--black);
+}
+.form-product label{
+    text-transform: capitalize;
+    color: var(--green);
+    font-size: 20px;
+    font-weight: 600 ;
+    border: 1px solid var(--white-alpha-40);
+}   
+.form-product input{
+    width: 100%;
+    border: none;
+    padding: 16px 70px ;
+    background-color: #eee;
+    margin-top: 8px;
+    border-radius: 6px;
+}
+.input-item{
+    margin-top: 10px;
+}
+.label-category{
+    margin-top: 16px;
+}
+.input-item select{
+    border: none;
+    padding: 10px 30px;
+    font-size: 13px;
+    text-transform: capitalize;
+    background-color: var(--white);
+    border-radius: 6px;
+    border: 1px solid var(--green-alpha-50);
+    cursor: pointer;
+    color: var(--black);
+}
+ .input-item textarea{
+   width: 100%;
+   resize: none;
+   border: none;
+   background: #eee;
+   border-radius: 8px;
+   margin-top: 10px;
+   font-size: 16px;
+   color: var(--black);
+ }
+ .product-button{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 30px;
+ }
+   
+ .product-button button {
+    display: flex;
+    border: none;
+    margin-top: 10px;
+    padding: 6px 10px;
+    margin-left: 10px;
+    margin-top: 30px;
+ }
+ 
